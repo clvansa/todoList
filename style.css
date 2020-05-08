@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(140deg,#ff4545,#f7aba8);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+}
+h1{
+    color: white;
+}
+
+form{
+    display: flex;
+    margin: 50px;
+}
+
+.input{
+    width: 400px ;
+    height: 40px;
+    border: none;
+    font-size: 1.2rem;
+    padding-left: 5px;
+    
+}
+.fa-plus-square,
+.fa-check,
+.fa-trash{
+    pointer-events: none;
+}
+
+.btn{
+width: 50px;
+height: 40px;
+background-color:#ff4545 ;
+border: none;
+color: white;
+font-size: 1.3rem;
+transition: all .5s ease;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #ff4545;
+}
+
+
+
+.filter{
+    margin: 0 5px;
+    height: 40px;
+}
+
+
+.tododiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.todoItem{
+    width: 450px;
+    list-style: none;
+    background-color: white;
+    height: 40px;
+    padding: 5px;
+  
+}
+
+.todoTrush,
+.todoCheck{
+    padding: 12.5px;
+    border: none;
+    color: white;
+    transition: all .5s ease;
+    
+}
+.todoTrush{
+    background-color:#ff4545 ;
+}
+
+.todoTrush:hover{
+    background-color:white ;
+    color:#ff4545 ;
+}
+
+.todoCheck:hover{
+    color:rgb(50, 211, 50) ;
+    background-color: white;
+}
+
+
+.todoCheck{
+    background-color:rgb(50, 211, 50) ;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.completed{
+    opacity: .5;
+    text-decoration: line-through;
+}

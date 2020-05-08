@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$color1 : #ff4545;
+$white :white;
+$green :rgb(69, 194, 69);
+$size1 : 2rem ;
+$size2 : 1.2rem ;
+
+@mixin flex ($dir:row){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $dir;
+}
+
+
+
+
+button{
+    border: none;
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(140deg,#ff4545,#e9cbcb);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container{
+    @include flex(column);
+    h1{
+        color:$white;
+        font-size: $size1;
+        padding: 20px;
+    }
+    h3{
+        color: $white;
+    }
+
+    form{
+        @include flex();
+        .input{
+            width: 30vw;
+            height: 40px;
+            border: none;
+            margin: 30px auto;
+            font-size: $size2;
+        }
+
+        .btn{
+            padding: 10px;
+            background-color: $color1;
+            border: none;
+            .fa-plus-square{
+                font-size: 1.2rem;
+                pointer-events: none;
+            }
+        }
+
+        .filter{
+            border: none;
+            outline: none;
+            height: 40px;
+            color: $color1;
+            margin-left: 10px;
+
+        }
+    }
+
+    .lists{
+
+        .todo {
+            @include flex();
+            margin: 15px;
+            font-size: 1rem;
+
+            
+
+            
+
+            .list{
+                width: 300px;
+                min-height: 30px;
+                list-style: none;
+                background-color: $white;
+                padding-left: 5px;
+                text-overflow: ellipsis;
+                
+            }
+            .btncheck{
+                    background-color: $green;
+                    padding: 7.5px;
+                    .fa-check{
+                        pointer-events: none;
+                    }
+            }
+
+            .btntrush{
+                    background-color: $color1;
+                    padding: 7.5px;
+                    .fa-trash-restore{
+                        pointer-events: none;
+                    }
+            }
+            
+
+        }
+        .fall {
+            transform: translateY(8rem) rotateZ(20deg);
+            opacity: 0;
+            transition: all .5s ease;
+        }
+
+        .checked{
+            opacity: .5;
+            text-decoration: line-through;
+        }
+    }
+    
+}
